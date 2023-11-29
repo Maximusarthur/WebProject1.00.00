@@ -1,0 +1,162 @@
+/*导航栏*/
+.top-bar {
+    height: 85px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2001;
+    font-size: 23px;
+    font-weight: 400;
+    color: #222226;
+    background-color: #fff;
+}
+.box-top {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+    /* 最小宽度，窗口缩小之后到1280px不会再缩小 */
+    min-width: 1280px;
+    box-sizing: border-box;
+    padding: 0 24px;
+
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    /* 阴影  水平阴影距离，垂直阴影距离， 模糊尺寸， 阴影尺寸 颜色*/
+    box-shadow:0 2px 4px 0 rgb(0, 0, 0,5%);
+}
+
+/*左*/
+.box-top-left {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.box-top-left a{
+    height: 100%;
+}
+.box-top-left img{
+    vertical-align: top;
+    margin-right: 10px; /* 可选：为图像添加右侧间距 */
+}
+
+/*中*/
+.box-top-middle {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px;
+}
+.top-ui-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.top-ui-middle li {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+.top-ui-middle a {
+    position: relative;
+    padding-bottom: 6px; /* 调整间距大小 */
+    z-index: 2001;
+    font-size: 23px;
+    font-weight: 400;
+    color: #222226;
+    background-color: #fff;
+    text-decoration: none;
+}
+.top-ui-middle a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: gray;
+    transition: width 0.2s ease-out;
+}
+.top-ui-middle a:hover::before {
+    width: 100%;
+}
+
+/*右*/
+.box-top-right {
+    width: 6%;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.box-top-right a {
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin-bottom: -2px; /* 调整间距大小 */
+    padding-bottom: 2px; /* 添加底部内边距以保持横线与文字之间的距离 */
+}
+.box-top-right a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* 将横线位置上移以保持与文字的对齐 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: gray;
+    transition: width 0.2s ease-out;
+}
+.box-top-right a:hover::before {
+    width: 100%;
+}
+/*鼠标*/
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+.custom-cursor img {
+    width: 30px; /* 设置图片宽度 */
+    height: 30px; /* 设置图片高度 */
+}
+
+/*页脚*/
+.footer{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 180px;
+}
+.row_1{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+.row_1 a{
+    color:#939393;
+    text-decoration: none;//下划线;
+}
+.text:hover {
+    color: black;
+}
+
+.beian p{
+    font-size: 15px;
+    color:#939393;
+    line-height: 2;
+    text-align: center;
+}
+.beian p:hover{
+    color: black;
+}

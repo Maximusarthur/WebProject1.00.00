@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>石头长在云天外</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../image/logo.ico"><!--引用index.css文件中的修饰 -->
+    <link rel="stylesheet" href="../css/login_logup.css">  <!--引用index.css文件中的修饰 -->
+    <link rel="stylesheet" href="../css/universalcss.css">
+</head>
+
+<body>
+<div class="custom-cursor">
+    <img src="../image/cursor.png" alt="Custom Cursor">
+</div>
+<script>
+    document.addEventListener('mousemove', function(e) {
+        var cursor = document.querySelector('.custom-cursor');
+        cursor.style.top = e.clientY + 'px';
+        cursor.style.left = e.clientX + 'px';
+    });
+</script>
+
+<div class="top-bar">
+    <div class="box-top">
+        <div class="box-top-left">
+            <a href="../index.html">
+                <img src="../image/index_page.png" alt="">
+            </a>
+        </div>
+
+        <div class="box-top-middle">
+            <ul class="top-ui-middle">
+                <li>
+                    <a class="underline" href="../index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+                </li>
+                <li>
+                    <a class="underline" href="#"
+                       target="_blank">线上旅游</a>
+                </li>
+                <li>
+                    <a class="underline" href="../page/culturalworks.html" target="_blank">石林文创</a>
+                </li>
+                <li>
+                    <a class="underline" href="../page/shop.html" target="_blank">石林产品</a>
+                </li>
+                <li>
+                    <a class="underline" href="../page/introduce.html" target="_blank">石林概览</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box-top-right">
+            <div class="top-ui-right">
+                <!--<a href="#" target="_blank" class="button">登录/注册</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="overlay"></div>
+    <div class="htmleaf-container">
+        <div id="wrapper" class="login-page">
+            <div id="login_form" class="form">
+                <h2 style="color: #4CAF50;">石头长在云天外</h2>
+                <form class="register-form">
+                    <label for="r_userName"></label>
+                    <input type="text" placeholder="用户名" id="r_userName"/>
+                    <label for="r_password"></label>
+                    <input type="password" placeholder="密码" id="r_password" />
+                    <label for="r_email"></label>
+                    <input type="text" placeholder="电子邮件" id="r_email"/>
+                    <button id="create">创建账户</button>
+                    <p class="message">已经有了一个账户? <a href="#" class="switch-form-link">立刻登录</a></p>
+                </form>
+                <form class="login-form">
+                    <label for="userName"></label>
+                    <input type="text" placeholder="用户名" id="userName"/>
+                    <label for="password"></label>
+                    <input type="password" placeholder="密码" id="password"/>
+                    <button id="login">登　录</button>
+                    <p class="message">还没有账户? <a href="#" class="switch-form-link">立刻创建</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var registerForm = document.querySelector('.register-form');
+            var loginForm = document.querySelector(`.login-form`);
+            var switchLinks = document.querySelectorAll(`.switch-form-link`);
+
+            // 隐藏注册页表单
+            registerForm.classList.add('hidden');
+
+            switchLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    // 切换表单的显示/隐藏状态
+                    registerForm.classList.toggle('hidden');
+                    loginForm.classList.toggle('hidden');
+                });
+            });
+
+            var createButton = document.getElementById('create');
+            var switchToRegisterLink = document.querySelector('.message a');
+
+            createButton.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // 获取输入的值
+                var userNameInput = document.getElementById('r_userName');
+                var passwordInput = document.getElementById('r_password');
+                var emailInput = document.getElementById('r_email');
+                var userName = userNameInput.value;
+                var password = passwordInput.value;
+                var email = emailInput.value;
+
+                userNameInput.value = '';
+                passwordInput.value = '';
+                emailInput.value = '';
+            });
+
+            switchToRegisterLink.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // 隐藏登录页表单，显示注册页表单
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+            });
+        });
+    </script>
+</header>
+
+<div class="footer">
+    <div class="row_1" style="margin-bottom: 0">
+        <a class="text" href=" "><span>&nbsp;关于我们&nbsp;</span></a><span> | </span>
+        <a class="text" href=" "><span>&nbsp;加入我们&nbsp;</span></a><span> | </span>
+        <a class="text" href=" "><span>&nbsp;联系我们&nbsp;</span></a>
+    </div>
+
+    <hr style="border: 1px solid #939393; width: 50%;">
+
+    <div class="beian">
+        <p>
+            Copyright© 2023云游石林 All Rights Reserved <br/>
+            云游石林——石林县彩云文化产品研发项目
+        </p>
+        <center>
+            <a target="_blank" href="https://beian.miit.gov.cn/"
+               style="text-decoration:none;font-size: 15px;color:#939393;">
+                 滇ICP备2023000483号-1
+            </a>
+            <span> &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+            <a target="_blank" style="text-decoration:none;font-size: 15px;color:#939393;"
+               href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53062702530718">
+                <img src="../image/beian.png" style="vertical-align:middle;" alt="图片">
+                滇公网安备 53062702530718号
+            </a>
+        </center>
+    </div>
+
+</div>
+</body>
+</html>

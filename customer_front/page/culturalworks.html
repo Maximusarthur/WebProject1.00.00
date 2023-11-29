@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>石头长在云天外</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../image/logo.ico">
+  <link rel="stylesheet" href="../css/index.css">  <!--引用index.css文件中的修饰 -->
+  <link rel="stylesheet" href="../css/universalcss.css">
+</head>
+<body>
+<div class="custom-cursor">
+  <img src="../image/cursor.png" alt="Custom Cursor">
+</div>
+<script>
+  document.addEventListener('mousemove', function(e) {
+    var cursor = document.querySelector('.custom-cursor');
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+  });
+</script>
+
+<div class="top-bar">
+  <div class="box-top">
+    <div class="box-top-left">
+      <a href="../index.html">
+        <img src="../image/index_page.png" alt="">
+      </a>
+    </div>
+
+    <div class="box-top-middle">
+      <ul class="top-ui-middle">
+        <li>
+          <a class="underline" href="../index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+        </li>
+        <li>
+          <a class="underline" href="#"
+             target="_blank">线上旅游</a>
+        </li>
+        <li>
+          <a class="underline" href="../page/culturalworks.html" target="_blank">石林文创</a>
+        </li>
+        <li>
+          <a class="underline" href="../page/shop.html" target="_blank">石林产品</a>
+        </li>
+        <li>
+          <a class="underline" href="../page/introduce.html" target="_blank">石林概览</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box-top-right">
+      <div class="top-ui-right">
+        <a href="../page/login_logup.html" target="_blank" class="button">登录/注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+<header>
+  <div class="overlay"></div>
+</header>
+
+<div class="footer">
+  <div class="row_1" style="margin-bottom: 0">
+    <a class="text" href=" "><span>&nbsp;关于我们&nbsp;</span></a><span> | </span>
+    <a class="text" href=" "><span>&nbsp;加入我们&nbsp;</span></a><span> | </span>
+    <a class="text" href=" "><span>&nbsp;联系我们&nbsp;</span></a>
+  </div>
+  <hr style="border: 1px solid #939393; width: 50%;">
+  <div class="beian">
+    <p>
+      Copyright© 2023云游石林 All Rights Reserved <br/>
+      云游石林——石林县彩云文化产品研发项目
+    </p>
+    <center>
+      <a target="_blank" href="https://beian.miit.gov.cn/"
+         style="text-decoration:none;font-size: 15px;color:#939393;">
+         滇ICP备2023000483号-1
+      </a>
+      <span> &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+      <a target="_blank" style="text-decoration:none;font-size: 15px;color:#939393;"
+         href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53062702530718">
+        <img src="../image/beian.png" style="vertical-align:middle;" alt="图片">
+        滇公网安备 53062702530718号
+      </a>
+    </center>
+  </div>
+</div>
+</body>
+</html>
